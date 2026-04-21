@@ -4,7 +4,7 @@ set -euo pipefail
 # Feynman installer
 # Usage: curl -fsSL https://feynman.is/install | bash
 
-REPO="emmanuelebenatti/feynman"
+REPO="getcompanion-ai/feynman"
 BINARY="feynman"
 INSTALL_DIR="${FEYNMAN_INSTALL_DIR:-$HOME/.local/bin}"
 
@@ -40,7 +40,7 @@ detect_os() {
 
 detect_arch() {
   case "$(uname -m)" in
-    x86_64 | amd64)  echo "x86_64" ;;
+    x86_64 | amd64)  echo "x64" ;;
     aarch64 | arm64) echo "arm64" ;;
     *)               error "Unsupported architecture: $(uname -m)." ;;
   esac
